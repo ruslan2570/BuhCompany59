@@ -55,7 +55,7 @@
 }
 
 .bigsplash_btn {
-    font-size: 18px !important;
+    font-size: 24px !important;
     width: 300px !important;
     height: 68px !important;
 }
@@ -147,6 +147,20 @@ svg {
     padding-bottom: 50px;
 }
 
+.slideshow-wrapper {
+    position: relative;
+}
+
+.light-arrow {
+    color: #e1e1e1 !important;
+
+}
+
+.light-arrow:hover {
+    background-color: rgba(19, 19, 19, 0.528);
+}
+
+
 .slideshow-container {
     max-width: 65%;
     position: relative;
@@ -211,6 +225,8 @@ svg {
     transition: .6s ease;
     border-radius: 0 3px 3px 0;
     z-index: 1;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .active,
@@ -342,12 +358,12 @@ svg {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    padding-bottom: 76px;
 }
 
 .post-item {
     padding: 10px;
-
 }
 
 .post-item-wrap {
@@ -531,11 +547,33 @@ svg {
 
 .contact-form__button {
     flex: 0 0 auto;
-    font-size: 24px
+    font-size: 18px;
+    background: #D9FFF8;
+    border-radius: 10px;
+    width: 250px;
+height: 50px;
+
+
+
+}
+
+.contact-form__inputs {
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .contact-form__input {
-    font-size: 24px
+    font-size: 20px;
+    color: #9A9A9A;
+    margin: 20px;
+
+    height: 40px;
+
+    background: #E9E9E9;
+    border-radius: 10px;
+    border-color: #E9E9E9;
 }
 
 * {
@@ -629,7 +667,7 @@ li {
 .btn-call {
     font-size: 18px;
     width: 150px;
-    height: 50px
+    height: 50px;
 }
 
 .header-contacts {
@@ -787,22 +825,7 @@ body {
     font-size: 36px;
 }
 
-/* Next & previous buttons */
-/* .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -30px;
-    padding: 16px;
-    color: #888;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  } */
 
-/* Position the "next button" to the right */
 .next {
     position: absolute;
     right: 0;
@@ -1046,10 +1069,17 @@ h2 {
 
 .contact-form__title {
     font-size: 23px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    display: flex;
 }
 
 .contact-form {
-    background-color: #E5D6D2;
+    background: #BBB5C4;
+
     font-size: 30px;
     max-width: 80%;
     margin: 50px auto;
