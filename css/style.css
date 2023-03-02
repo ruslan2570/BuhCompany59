@@ -1287,10 +1287,20 @@ input[type=file]::file-selector-button:hover {
 
 .aboyt_img{
 
-    width: 609px;
-    height: 609px;
-    border: #0000;
-    border-radius: 10px;
+    
+width: 1410.37px;
+height: 1529px;
+left: 3.5px;
+top: 144.5px;
+
+border: 1px solid #7C9CBA;
+
+height: 1529px;
+width: 1410.37255859375px;
+left: 3.5px;
+top: 144.5px;
+border-radius: 0px;
+
 }
 
 .aboyt_content{
