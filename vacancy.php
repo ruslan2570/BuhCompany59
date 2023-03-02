@@ -94,6 +94,14 @@ if (!mysqli_query($link, $query)) {
     <main class="service-description-container">
         <h1>Вакансии</h1>
 
+        <?php 
+    
+        if(mysqli_num_rows($result) == 0){
+            echo 'На данный момент нет вакансий, но вы можете отправить свое резюме.';
+        } else{
+        
+        ?>
+
         <div class="vacancy-list">
             <?php foreach ($result as $row) { ?>
                 <div class="vacancy-card">
@@ -126,7 +134,7 @@ if (!mysqli_query($link, $query)) {
                     } ?>
                     </p>
                 </div>
-            <?php } ?>
+            <?php } } ?>
         </div>
 
         <hr>
