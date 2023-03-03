@@ -1216,6 +1216,8 @@ input[type=file]::file-selector-button:hover {
     color: #BBB5C4;
     margin-bottom: 15px;
 
+    
+
 }
 
 .content_header{
@@ -1337,3 +1339,33 @@ input[type=file]::file-selector-button:hover {
 
     }
 }
+
+
+
+.img_about{
+ border-radius: 0px;
+  position: absolute;
+  left: 922px;
+  top: 375px;
+
+ 
+
+}
+
+
+h4 {
+    text-align: left;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    color: #BBB5C4;
+    padding-top: 30px;5
+    line-height: 64px;
+    align-items: center;
+}
+
+
+
+
+
