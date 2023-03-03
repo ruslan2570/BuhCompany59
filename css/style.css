@@ -153,6 +153,8 @@ svg {
 
 .light-arrow {
     color: #e1e1e1 !important;
+    margin-left: 100px !important;
+    margin-right: 100px !important;
 
 }
 
@@ -225,8 +227,8 @@ svg {
     transition: .6s ease;
     border-radius: 0 3px 3px 0;
     z-index: 1;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .active,
@@ -795,7 +797,7 @@ body {
     border: 1px solid #203B5B;
     border-radius: 10px;
     height: 335px;
-    width: 400px;
+    width: 500px;
     font-family: 'PT Sans';
 
 }
