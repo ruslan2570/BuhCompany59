@@ -1195,6 +1195,9 @@ input[type=file]::file-selector-button:hover {
     font-family: Inter;
     font-size: 18px;
     padding: 10px 5px
+
+
+    
 }
 
 
@@ -1409,3 +1412,109 @@ h4 {
 
 
 
+.contacts_text {
+
+    
+    left: 0%;
+    right: 90.89%;
+    top: 35.61%;
+    bottom: 52.65%;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    
+    /* Серый */
+    
+    color: #BBB5C4;
+
+    margin-left: 60px;
+
+    height: 31px;
+    
+   
+    
+
+}
+
+.contacts_text_a {
+
+    height: 31px;
+    width: 639px;
+    left: 243px;
+    top: 86.9580078125px;
+    border-radius: nullpx;
+    
+    
+    left: 24.87%;
+    right: 9.72%;
+    top: 35.21%;
+    bottom: 52.24%;
+    
+    /* Н3 */
+    
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    
+    /* Серый */
+    
+    color: #BBB5C4;
+    margin-left: 60px;
+
+}
+
+
+.h1_contacts {
+
+   
+    
+   
+   
+    
+    border-radius: nullpx;
+    //styleName: Н1;
+    font-family: 'Playfair Display';
+    
+    
+   
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 68px;
+
+   
+  
+    
+   
+    
+    /* Н1 */
+    
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 64px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    
+    /* Серый */
+    
+    color: #BBB5C4;       
+    
+    
+    
+}
