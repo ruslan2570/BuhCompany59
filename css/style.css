@@ -326,6 +326,13 @@ svg {
     color: #3f313f;
     padding-left: 179px
 }
+.centerTablestyle { 
+    margin: 0px auto; 
+color:rgb(167, 161, 161); 
+    font-size: 16px;
+}
+
+
 
 .actions {
     font-family: 'PT Sans';
