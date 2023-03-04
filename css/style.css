@@ -1194,7 +1194,13 @@ input[type=file]::file-selector-button:hover {
 .contacts_table td {
     font-family: Inter;
     font-size: 18px;
-    padding: 10px 5px
+
+    
+    
+    
+
+
+    
 
 
     
@@ -1415,10 +1421,7 @@ h4 {
 .contacts_text {
 
     
-    left: 0%;
-    right: 90.89%;
-    top: 35.61%;
-    bottom: 52.65%;
+
     
     font-family: 'Inter';
     font-style: normal;
@@ -1436,7 +1439,7 @@ h4 {
 
     margin-left: 60px;
 
-    height: 31px;
+    
     
    
     
@@ -1445,17 +1448,14 @@ h4 {
 
 .contacts_text_a {
 
-    height: 31px;
+    height: 65px;
     width: 639px;
     left: 243px;
-    top: 86.9580078125px;
+    
     border-radius: nullpx;
     
     
-    left: 24.87%;
-    right: 9.72%;
-    top: 35.21%;
-    bottom: 52.24%;
+   
     
     /* Н3 */
     
@@ -1473,6 +1473,7 @@ h4 {
     
     color: #BBB5C4;
     margin-left: 60px;
+   
 
 }
 
@@ -1505,7 +1506,7 @@ h4 {
     font-style: normal;
     font-weight: 400;
     font-size: 48px;
-    line-height: 64px;
+    line-height: 80px;
     /* identical to box height */
     
     display: flex;
