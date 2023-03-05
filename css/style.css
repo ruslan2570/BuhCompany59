@@ -60,76 +60,6 @@
     height: 68px !important;
 }
 
-.decisions_heading {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 23px;
-    color: #3f313f;
-    padding-top: 80px;
-    padding-bottom: 25px;
-    display: flex;
-    justify-content: center
-}
-
-.decisions_text {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #3f313f;
-    padding-right: 92px
-}
-
-.decisions_title {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 22px;
-    color: #3f313f
-}
-
-.decisions_content {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #3f313f;
-    padding-left: 179px
-}
-
-.ex__head {
-    padding-left: 16px
-}
-
-.circle {
-    background: #456bd9;
-    border-radius: 50%;
-    color: #fff;
-    height: 500px;
-    position: relative;
-    width: 500px;
-    shape-outside: circle(50%)
-}
-
-.circle-content {
-    hyphens: auto;
-    margin: .75em;
-    text-align: center
-}
-
-svg {
-    fill: currentColor;
-    height: auto;
-    max-width: 66vmin;
-    transform-origin: center;
-    width: 66%
-}
-
 .advant {
     padding: 20px 0;
 }
@@ -316,7 +246,6 @@ svg {
     color: #3f313f
 }
 
-
 .prices_content {
     font-family: 'PT Sans';
     font-style: normal;
@@ -326,13 +255,59 @@ svg {
     color: #3f313f;
     padding-left: 179px
 }
-.centerTablestyle { 
-    margin: 0px auto; 
-color:rgb(167, 161, 161); 
+
+.centerTablestyle {
+    margin: 0px auto;
+    color: rgb(167, 161, 161);
     font-size: 16px;
 }
 
+.action_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,
+            #203B5B 0%,
+            #203B5B 70%,
+            #BBB5C4 70%,
+            #BBB5C4 100%);
 
+}
+
+.action_card>h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #BBB5C4;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.action_card>p {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #BBB5C4;
+    padding: 30px;
+
+}
+
+.action_card {
+    background: #203B5B;
+    border: 1px solid #BBB5C4;
+    border-radius: 10px;
+    width: 400px;
+    height: 200px;
+
+}
 
 .actions {
     font-family: 'PT Sans';
@@ -364,7 +339,7 @@ color:rgb(167, 161, 161);
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    
+
     padding-bottom: 76px;
 }
 
@@ -375,7 +350,7 @@ color:rgb(167, 161, 161);
 }
 
 .post-item-wrap {
-    
+
     position: relative;
 }
 
@@ -900,7 +875,7 @@ hr {
     text-align: left;
 }
 
-.btn-price{
+.btn-price {
     margin-top: 100px;
     width: 362px;
     height: 88px;
@@ -915,13 +890,13 @@ hr {
     padding-left: 15px;
 }
 
-.service-content-container{
+.service-content-container {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.service-content-container > img{
+.service-content-container>img {
     height: 300px;
 }
 
@@ -961,7 +936,7 @@ h2 {
     color: black;
 }
 
-.dark_header {
+.dark-header {
     color: #BBB5C4;
 }
 
@@ -1198,15 +1173,15 @@ input[type=file]::file-selector-button:hover {
     font-family: Inter;
     font-size: 18px;
 
-    
-    
-    
 
 
-    
 
 
-    
+
+
+
+
+
 }
 
 
@@ -1232,24 +1207,24 @@ input[type=file]::file-selector-button:hover {
     font-family: 'Playfair Display';
 
 
-letter-spacing: 0em;
+    letter-spacing: 0em;
 
 
-//styleName: Н3;
+    //styleName: Н3;
 
-font-size: 24px;
-font-weight: 400;
-line-height: 31px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31px;
 
-text-align: left;
+    text-align: left;
 
-   
-   
-    
+
+
+
 
 }
 
-.content_header{
+.content_header {
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 500;
@@ -1257,7 +1232,7 @@ text-align: left;
     line-height: 40px;
     color: #BBB5C4;
     margin-bottom: 20px;
-    
+
 }
 
 
@@ -1273,9 +1248,9 @@ text-align: left;
     .post-wrap {
         flex-wrap: wrap;
     }
-    
 
-    .service-content-container{
+
+    .service-content-container {
         display: flex;
         flex-direction: column;
     }
@@ -1374,18 +1349,18 @@ text-align: left;
 
 
 
-.img_about{
- border-radius: 0px;
-  
-  left: 922px;
-  top: 375px;
-  width: 418px;
-  height: 568px;
-  float: right;
+.img_about {
+    border-radius: 0px;
 
-  margin-right: 163px;
+    left: 922px;
+    top: 375px;
+    width: 418px;
+    height: 568px;
+    float: right;
 
- 
+    margin-right: 163px;
+
+
 
 }
 
@@ -1401,24 +1376,24 @@ h4 {
     line-height: 64px;
     align-items: center;
     margin-left: 156px;
-    
 
-    
+
+
 }
 
 
-.content_header_a{
+.content_header_a {
     text-align: left;
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     color: #BBB5C4;
-    padding-top: 30px;5
-    line-height: 64px;
+    padding-top: 30px;
+    5 line-height: 64px;
     align-items: center;
     margin-left: 156px;
-    padding-bottom:35px
+    padding-bottom: 35px
 }
 
 
@@ -1428,29 +1403,29 @@ h4 {
 
 .contacts_text {
 
-    
 
-    
+
+
     font-family: 'Inter';
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
     line-height: 29px;
     /* identical to box height */
-    
+
     display: flex;
     align-items: center;
-    
+
     /* Серый */
-    
+
     color: #BBB5C4;
 
     margin-left: 60px;
 
-    
-    
-   
-    
+
+
+
+
 
 }
 
@@ -1459,71 +1434,71 @@ h4 {
     height: 65px;
     width: 639px;
     left: 243px;
-    
+
     border-radius: nullpx;
-    
-    
-   
-    
+
+
+
+
     /* Н3 */
-    
+
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 31px;
     /* identical to box height */
-    
+
     display: flex;
     align-items: center;
-    
+
     /* Серый */
-    
+
     color: #BBB5C4;
     margin-left: 60px;
-   
+
 
 }
 
 
 .h1_contacts {
 
-   
-    
-   
-   
-    
+
+
+
+
+
     border-radius: nullpx;
     //styleName: Н1;
     font-family: 'Playfair Display';
-    
-    
-   
+
+
+
     letter-spacing: 0em;
     text-align: left;
     margin-left: 68px;
 
-   
-  
-    
-   
-    
+
+
+
+
+
     /* Н1 */
-    
+
     font-family: 'Playfair Display';
     font-style: normal;
     font-weight: 400;
     font-size: 48px;
     line-height: 80px;
     /* identical to box height */
-    
+
     display: flex;
     align-items: center;
-    
+
     /* Серый */
-    
-    color: #BBB5C4;       
-    
-    
-    
+
+    color: #BBB5C4;
+
+
+
 }
