@@ -1229,23 +1229,12 @@ input[type=file]::file-selector-button:hover {
     margin-bottom: 40px;
     margin-left: 156px;
 
-    font-family: 'Playfair Display';
-
-
     letter-spacing: 0em;
-
-
-    //styleName: Н3;
-
     font-size: 24px;
     font-weight: 400;
     line-height: 31px;
 
     text-align: left;
-
-
-
-
 
 }
 
@@ -1358,8 +1347,8 @@ input[type=file]::file-selector-button:hover {
     }
 
     .case {
-        display: flex;
         flex-wrap: wrap;
+        padding: 10px;
     }
 
     .case-text {
@@ -1370,6 +1359,26 @@ input[type=file]::file-selector-button:hover {
         display: none;
 
     }
+
+    .contact-form__inputs{
+        flex-direction: column;
+    }
+
+    .case-block{
+        margin-top: 30px;
+    }
+
+    .bigsplash_img{
+        width: 90%;
+        height: 90%;
+    
+    }
+
+    .bigsplash{
+        justify-content: center;
+        align-items: center;
+    }
+
 }
 
 
