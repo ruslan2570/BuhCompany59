@@ -943,6 +943,19 @@ h2 {
     line-height: 64px;
 }
 
+h4 {
+    text-align: left;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    color: #BBB5C4;
+    padding-top: 30px;
+    line-height: 64px;
+    align-items: center;
+    margin-left: 156px;
+}
+
 .light-header {
     color: black;
 }
