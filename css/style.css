@@ -896,7 +896,7 @@ hr {
     font-family: Inter;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
     padding-left: 15px;
 }
@@ -1159,6 +1159,7 @@ input[type=file]::file-selector-button:hover {
 
 .form-label {
     font-family: Inter;
+    color: #BBB5C4;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -1376,7 +1377,7 @@ input[type=file]::file-selector-button:hover {
 }
 
 
-h4 {
+.header_ {
     text-align: left;
     font-family: 'PT Sans';
     font-style: normal;
@@ -1387,9 +1388,6 @@ h4 {
     line-height: 64px;
     align-items: center;
     margin-left: 156px;
-
-
-
 }
 
 
