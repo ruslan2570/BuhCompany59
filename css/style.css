@@ -367,6 +367,7 @@
 .post-title {
     color: #33261d;
     font-size: 24px;
+    margin-top: 10px;
     margin-bottom: 15px;
     transition: .3s ease-in-out
 }
@@ -876,7 +877,7 @@ hr {
     font-family: Inter;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
     padding: 10px;
     color: #BBB5C4;
@@ -885,8 +886,10 @@ hr {
 
 .btn-price {
     margin-top: 100px;
-    width: 362px;
-    height: 88px;
+    width: 300px;
+    height: 80px;
+    align-self: center;
+    cursor: pointer;
 }
 
 .description-list>li {
