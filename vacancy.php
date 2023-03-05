@@ -94,59 +94,60 @@ if (!mysqli_query($link, $query)) {
     <main class="service-description-container">
         <h1>Вакансии</h1>
 
-        <?php 
-    
-        if(mysqli_num_rows($result) == 0){
-            echo 'На данный момент нет вакансий, но вы можете отправить свое резюме.';
-        } else{
-        
+        <?php
+
+        if (mysqli_num_rows($result) == 0) {
+            echo '<h3 class="dark-header">На данный момент открытых вакансий нет, но вы можете отправить нам свое резюме.<h3>';
+        } else {
+
         ?>
 
-        <div class="vacancy-list">
-            <?php foreach ($result as $row) { ?>
-                <div class="vacancy-card">
-                    <h2 class="vacancy-header">
-                        <?php echo $row["name"] ?>
-                    </h2>
-                    <?php if (isset($row["salary"])) { ?>
-                        <p>Зарплата:
+            <div class="vacancy-list">
+                <?php foreach ($result as $row) { ?>
+                    <div class="vacancy-card">
+                        <h2 class="vacancy-header">
+                            <?php echo $row["name"] ?>
+                        </h2>
+                        <?php if (isset($row["salary"])) { ?>
+                            <p>Зарплата:
                             <?php echo $row["salary"];
-                    } ?>
-                    </p>
-                    <?php if (isset($row["experience"])) { ?>
-                        <p>Опыт работы:
-                            <?php echo $row["experience"];
-                    } ?>
-                    </p>
-                    <?php if (isset($row["employment"])) { ?>
-                        <p>Тип занятости:
-                            <?php echo $row["employment"];
-                    } ?>
-                    </p>
-                    <?php if (isset($row["education"])) { ?>
-                        <p>Образование:
-                            <?php echo $row["education"];
-                    } ?>
-                    </p>
-                    <?php if (isset($row["skills"])) { ?>
-                        <p>Ключевые навыки:
-                            <?php echo $row["skills"];
-                    } ?>
-                    </p>
-                </div>
-            <?php } } ?>
-        </div>
+                        } ?>
+                            </p>
+                            <?php if (isset($row["experience"])) { ?>
+                                <p>Опыт работы:
+                                <?php echo $row["experience"];
+                            } ?>
+                                </p>
+                                <?php if (isset($row["employment"])) { ?>
+                                    <p>Тип занятости:
+                                    <?php echo $row["employment"];
+                                } ?>
+                                    </p>
+                                    <?php if (isset($row["education"])) { ?>
+                                        <p>Образование:
+                                        <?php echo $row["education"];
+                                    } ?>
+                                        </p>
+                                        <?php if (isset($row["skills"])) { ?>
+                                            <p>Ключевые навыки:
+                                            <?php echo $row["skills"];
+                                        } ?>
+                                            </p>
+                    </div>
+            <?php }
+            } ?>
+            </div>
 
-        <hr>
+            <hr>
 
-        <div class="form-container">
-            <p class="form-label">Вы можете прикрепить своё резюме здесь</p>
-            <form action="request.php" method="post" enctype="multipart/form-data">
+            <div class="form-container">
+                <p class="form-label">Вы можете прикрепить своё резюме здесь</p>
+                <form action="request.php" method="post" enctype="multipart/form-data">
 
-                <input type="file" name="cvFile" id="cvFile">
-                <button class="btn" type="submit">Отправить</button>
-            </form>
-        </div>
+                    <input type="file" name="cvFile" id="cvFile">
+                    <button class="btn" type="submit">Отправить</button>
+                </form>
+            </div>
 
     </main>
 
@@ -184,10 +185,10 @@ if (!mysqli_query($link, $query)) {
         </div>
 
         <div class="copyright">
-            <h3>Copyright</h3>
+            <h3>All Rights Reserved 2023</h3>
         </div>
     </footer>
     <script src="/js/modal.js"></script>
-<script src="/js/sticky.js"></script>
+    <script src="/js/sticky.js"></script>
 
 </body>
