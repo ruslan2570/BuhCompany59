@@ -41,8 +41,6 @@
 }
 
 .bigsplash_header {
-
-    padding-bottom: 50px;
     text-align: left;
 
 }
@@ -885,7 +883,7 @@ hr {
 }
 
 .btn-price {
-    margin-top: 100px;
+    margin-top: 50px;
     width: 300px;
     height: 80px;
     align-self: center;
@@ -1318,10 +1316,7 @@ input[type=file]::file-selector-button:hover {
         padding: 5px
     }
 
-    .header {
-        padding-bottom: 10px
-    }
-
+    
     .footer-links {
         flex-direction: column;
         text-align: center
