@@ -342,26 +342,19 @@
     margin: 0 auto;
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
-
-    padding-bottom: 76px;
-=======
-    flex-wrap: wrap
->>>>>>> e0077460eecdd0915998a0cfe563a12d870c7482
+    padding-bottom: 20px;
 }
 
 .post-item {
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
     padding: 10px;
 
 }
 
 .post-item-wrap {
-<<<<<<< HEAD
-
-=======
-    border: 1px solid #000000;
-    border-radius: 10px;
->>>>>>> e0077460eecdd0915998a0cfe563a12d870c7482
+    
     position: relative;
 }
 
@@ -373,14 +366,16 @@
 
 .post-title {
     color: #33261d;
+    font-size: 24px;
     margin-bottom: 15px;
     transition: .3s ease-in-out
 }
 
 .post-content {
     color: #000;
-    font-size: 18px;
+    font-size: 20px;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
 @media (min-width:768px) {
