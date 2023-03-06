@@ -303,7 +303,7 @@
     border: 1px solid #BBB5C4;
     border-radius: 10px;
     width: 400px;
-    height: 200px;
+    height: 100px;
 
 }
 
@@ -352,7 +352,7 @@
 }
 
 .post-item-wrap {
-    
+ 
     position: relative;
 }
 
@@ -389,7 +389,6 @@
         flex-basis: 33.333333333%
     }
 }
-
 
 .problems {
     background-color: #BBB5C4;
