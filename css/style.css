@@ -41,8 +41,6 @@
 }
 
 .bigsplash_header {
-
-    padding-bottom: 50px;
     text-align: left;
 
 }
@@ -885,7 +883,7 @@ hr {
 }
 
 .btn-price {
-    margin-top: 100px;
+    margin-top: 50px;
     width: 300px;
     height: 80px;
     align-self: center;
@@ -896,7 +894,7 @@ hr {
     font-family: Inter;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
     padding-left: 15px;
 }
@@ -941,6 +939,19 @@ h2 {
     font-weight: 400;
     font-size: 32px;
     line-height: 64px;
+}
+
+h4 {
+    text-align: left;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    color: #BBB5C4;
+    padding-top: 30px;
+    line-height: 64px;
+    align-items: center;
+    margin-left: 156px;
 }
 
 .light-header {
@@ -1159,6 +1170,7 @@ input[type=file]::file-selector-button:hover {
 
 .form-label {
     font-family: Inter;
+    color: #BBB5C4;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -1215,23 +1227,12 @@ input[type=file]::file-selector-button:hover {
     margin-bottom: 40px;
     margin-left: 156px;
 
-    font-family: 'Playfair Display';
-
-
     letter-spacing: 0em;
-
-
-    //styleName: Н3;
-
     font-size: 24px;
     font-weight: 400;
     line-height: 31px;
 
     text-align: left;
-
-
-
-
 
 }
 
@@ -1315,10 +1316,7 @@ input[type=file]::file-selector-button:hover {
         padding: 5px
     }
 
-    .header {
-        padding-bottom: 10px
-    }
-
+    
     .footer-links {
         flex-direction: column;
         text-align: center
@@ -1344,8 +1342,8 @@ input[type=file]::file-selector-button:hover {
     }
 
     .case {
-        display: flex;
         flex-wrap: wrap;
+        padding: 10px;
     }
 
     .case-text {
@@ -1356,6 +1354,30 @@ input[type=file]::file-selector-button:hover {
         display: none;
 
     }
+
+    .contact-form__inputs{
+        flex-direction: column;
+    }
+
+    .case-block{
+        margin-top: 30px;
+    }
+
+    .bigsplash_img{
+        width: 90%;
+        height: 90%;
+    
+    }
+
+    .bigsplash{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sticky{
+        position: absolute;
+    }
+
 }
 
 
@@ -1376,7 +1398,7 @@ input[type=file]::file-selector-button:hover {
 }
 
 
-h4 {
+.header_ {
     text-align: left;
     font-family: 'PT Sans';
     font-style: normal;
@@ -1387,9 +1409,6 @@ h4 {
     line-height: 64px;
     align-items: center;
     margin-left: 156px;
-
-
-
 }
 
 
