@@ -306,6 +306,14 @@
     height: 100px;
 
 }
+.price_card {
+    background: #203B5B;
+    border: 1px solid #BBB5C4;
+    border-radius: 10px;
+    width: 400px;
+    height: 200px;
+
+}
 
 .actions {
     font-family: 'PT Sans';
