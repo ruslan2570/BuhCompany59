@@ -21,8 +21,6 @@ if (!mysqli_query($link, $query)) {
 } else {
     $result = mysqli_query($link, $query);
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +49,9 @@ if (!mysqli_query($link, $query)) {
             <a href="/contacts.html">Контакты</a>
         </nav>
         <div class="header-contacts">
-            <a href="tel:89134514341"><h3 class="header-phone">+7 913 451 43 41</h3></a>
+            <a href="tel:89134514341">
+                <h3 class="header-phone">+7 913 451 43 41</h3>
+            </a>
             <p class="header-hours">Пн&nbsp;&mdash; пт 9:00&nbsp;&mdash; 18:00</p>
         </div>
         <div>
@@ -87,8 +87,29 @@ if (!mysqli_query($link, $query)) {
                     <button class="btn btn-form">Оставить заявку</button>
                 </form>
             </div>
-
         </div>
+
+
+        <div class="modal-vacancy">
+
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+
+                <div>
+
+                    <div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" onclick="clickHandler(event)">
+                        <div>
+                            <p>Поместите свое резюме в эту зону.</p>
+                            <p>Или нажмите и выберите файл.</p>
+                        </div>
+                    </div>
+
+                    </li>
+                    <button id="btn-send-cv" class="btn">Оставить заявку</button>
+                    </form>
+                </div>
+            </div>
+
     </header>
 
     <main class="service-description-container">
@@ -97,7 +118,7 @@ if (!mysqli_query($link, $query)) {
         <?php
 
         if (mysqli_num_rows($result) == 0) {
-            echo '<h3 class="dark-header">На данный момент открытых вакансий нет, но вы можете отправить нам свое резюме.<h3>';
+            echo '<p class="no-vacancy-text">Уважаемые соискатели, на текущий момент в БК «Эталон» отсутствуют открытые вакансии. Вы можете прикрепить свое резюме ниже, и мы рассмотрим Вашу кандидатуру в первую очередь при расширении команды.</p>';
         } else {
 
         ?>
@@ -138,16 +159,19 @@ if (!mysqli_query($link, $query)) {
             } ?>
             </div>
 
-            <hr>
-
-            <div class="form-container">
+            <?php if (mysqli_num_rows($result) == 0) { ?>
+                <!-- <div class="form-container">
                 <p class="form-label">Вы можете прикрепить своё резюме здесь</p>
                 <form action="request.php" method="post" enctype="multipart/form-data">
 
                     <input type="file" name="cvFile" id="cvFile">
                     <button class="btn" type="submit">Отправить</button>
                 </form>
-            </div>
+            </div> -->
+                <div>
+                    <button class="btn vacancy-btn">Выберите файл</button>
+                </div>
+            <?php } ?>
 
     </main>
 
@@ -178,8 +202,8 @@ if (!mysqli_query($link, $query)) {
                 <hr>
                 <ul>
                     <li>Тел.: <a href="tel:89134514341">+7 913 451 43 41</a></li>
-                        <li>E-mail:<a href="mailto:pochikovskaya.n@mail.ru">pochikovskaya.n@mail.ru</a></li>
-                        <li>Адрес: <a href="https://yandex.ru/maps/-/CCUKqLArdA" target="_blank">РФ, г.Новосибирск,ул. Танковая, 72</a></li>
+                    <li>E-mail:<a href="mailto:pochikovskaya.n@mail.ru">pochikovskaya.n@mail.ru</a></li>
+                    <li>Адрес: <a href="https://yandex.ru/maps/-/CCUKqLArdA" target="_blank">РФ, г.Новосибирск,ул. Танковая, 72</a></li>
                     <ul>
             </div>
         </div>
@@ -188,6 +212,7 @@ if (!mysqli_query($link, $query)) {
             <h3>All Rights Reserved 2023</h3>
         </div>
     </footer>
+    <script src="/js/uploadCV.js"></script>
     <script src="/js/modal.js"></script>
     <script src="/js/sticky.js"></script>
 

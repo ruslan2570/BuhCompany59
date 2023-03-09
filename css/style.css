@@ -258,7 +258,7 @@
     margin: 0px auto;
     color: rgb(167, 161, 161);
     font-size: 16px;
-    style="text-align: left;
+    text-align: left;
 }
 
 .action_container {
@@ -307,6 +307,7 @@
     height: 200px;
 
 }
+
 .price_card {
     background: #203B5B;
     border: 1px solid #BBB5C4;
@@ -361,7 +362,7 @@
 }
 
 .post-item-wrap {
- 
+
     position: relative;
 }
 
@@ -933,7 +934,7 @@ h1 {
     font-weight: 400;
     font-size: 48px;
     color: #BBB5C4;
-    padding-top: 30px;
+    /* padding-top: 30px; */
     line-height: 64px;
 }
 
@@ -1062,11 +1063,78 @@ h4 {
     display: block
 }
 
+#drop_zone {
+    border: 1px solid #BBB5C4;
+    border-radius: 10px;
+    width: 90%;
+    height: 100px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#drop_zone> div > p {
+    color: #BBB5C4;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.modal-vacancy {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, .4)
+}
+
+#btn-send-cv {
+    margin-top: 15px;
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.no-vacancy-text {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #BBB5C4;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 30px;
+}
+
 .vacancy-list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column
+}
+
+.vacancy-btn {
+    font-size: 18px;
+    width: 150px;
+    height: 50px;
+    background: #BBB5C4;
+
 }
 
 .vacancy-card {
@@ -1324,7 +1392,7 @@ input[type=file]::file-selector-button:hover {
         padding: 5px
     }
 
-    
+
     .footer-links {
         flex-direction: column;
         text-align: center
@@ -1363,26 +1431,26 @@ input[type=file]::file-selector-button:hover {
 
     }
 
-    .contact-form__inputs{
+    .contact-form__inputs {
         flex-direction: column;
     }
 
-    .case-block{
+    .case-block {
         margin-top: 30px;
     }
 
-    .bigsplash_img{
+    .bigsplash_img {
         width: 90%;
         height: 90%;
-    
+
     }
 
-    .bigsplash{
+    .bigsplash {
         justify-content: center;
         align-items: center;
     }
 
-    .sticky{
+    .sticky {
         position: absolute;
     }
 
@@ -1428,7 +1496,7 @@ input[type=file]::file-selector-button:hover {
     font-size: 32px;
     color: #BBB5C4;
     padding-top: 30px;
-    5 line-height: 64px;
+    line-height: 64px;
     align-items: center;
     margin-left: 156px;
     padding-bottom: 35px
@@ -1507,7 +1575,6 @@ input[type=file]::file-selector-button:hover {
 
 
     border-radius: nullpx;
-    //styleName: Н1;
     font-family: 'Playfair Display';
 
 
