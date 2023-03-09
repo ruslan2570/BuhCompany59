@@ -41,6 +41,8 @@
 }
 
 .bigsplash_header {
+
+    padding-bottom: 50px;
     text-align: left;
 
 }
@@ -56,6 +58,76 @@
     font-size: 24px !important;
     width: 300px !important;
     height: 68px !important;
+}
+
+.decisions_heading {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 23px;
+    color: #3f313f;
+    padding-top: 80px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center
+}
+
+.decisions_text {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #3f313f;
+    padding-right: 92px
+}
+
+.decisions_title {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #3f313f
+}
+
+.decisions_content {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #3f313f;
+    padding-left: 179px
+}
+
+.ex__head {
+    padding-left: 16px
+}
+
+.circle {
+    background: #456bd9;
+    border-radius: 50%;
+    color: #fff;
+    height: 500px;
+    position: relative;
+    width: 500px;
+    shape-outside: circle(50%)
+}
+
+.circle-content {
+    hyphens: auto;
+    margin: .75em;
+    text-align: center
+}
+
+svg {
+    fill: currentColor;
+    height: auto;
+    max-width: 66vmin;
+    transform-origin: center;
+    width: 66%
 }
 
 .advant {
@@ -244,6 +316,7 @@
     color: #3f313f
 }
 
+
 .prices_content {
     font-family: 'PT Sans';
     font-style: normal;
@@ -252,68 +325,6 @@
     line-height: 22px;
     color: #3f313f;
     padding-left: 179px
-}
-
-.centerTablestyle {
-    margin: 0px auto;
-    color: rgb(167, 161, 161);
-    font-size: 16px;
-    style="text-align: left;
-}
-
-.action_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to bottom,
-            #203B5B 0%,
-            #203B5B 70%,
-            #BBB5C4 70%,
-            #BBB5C4 100%);
-
-}
-
-.action_card>h3 {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 36px;
-    color: #BBB5C4;
-    text-align: center;
-    padding-top: 20px;
-}
-
-.action_card>p {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 31px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #BBB5C4;
-    padding: 30px;
-
-}
-
-.action_card {
-    background: #203B5B;
-    border: 1px solid #BBB5C4;
-    border-radius: 10px;
-    width: 400px;
-    height: 200px;
-
-}
-.price_card {
-    background: #203B5B;
-    border: 1px solid #BBB5C4;
-    border-radius: 10px;
-    width: 400px;
-    height: 200px;
-
 }
 
 .actions {
@@ -349,19 +360,17 @@
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    padding-bottom: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 76px;
 }
 
 .post-item {
-    margin: 10px;
-    border: 1px solid black;
-    border-radius: 10px;
     padding: 10px;
-
 }
 
 .post-item-wrap {
- 
+    border: 1px solid #000000;
+    border-radius: 10px;
     position: relative;
 }
 
@@ -373,17 +382,13 @@
 
 .post-title {
     color: #33261d;
-    font-size: 24px;
-    margin-top: 10px;
     margin-bottom: 15px;
     transition: .3s ease-in-out
 }
 
 .post-content {
     color: #000;
-    font-size: 20px;
-    justify-content: center;
-    padding-bottom: 20px;
+    font-size: 18px
 }
 
 @media (min-width:768px) {
@@ -638,7 +643,7 @@ li {
 }
 
 .header-links {
-    padding-left: 50px;
+    padding-left: 110px;
     display: flex;
     flex-wrap: wrap
 }
@@ -829,6 +834,7 @@ body {
     border-radius: 3px 0 0 3px;
 }
 
+/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
     background-color: rgba(19, 19, 19, 0.528);
@@ -851,6 +857,7 @@ body {
     transition: background-color 0.6s ease;
 }
 
+/* Add a background color to the active dot/circle */
 .active,
 .dot:hover {
     background-color: #8D87B7;
@@ -883,7 +890,7 @@ hr {
     font-family: Inter;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 29px;
     padding: 10px;
     color: #BBB5C4;
@@ -891,18 +898,16 @@ hr {
 }
 
 .btn-price {
-    margin-top: 50px;
-    width: 300px;
-    height: 80px;
-    align-self: center;
-    cursor: pointer;
+    margin-top: 100px;
+    width: 362px;
+    height: 88px;
 }
 
 .description-list>li {
     font-family: Inter;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 29px;
     padding-left: 15px;
 }
@@ -949,24 +954,11 @@ h2 {
     line-height: 64px;
 }
 
-h4 {
-    text-align: left;
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    color: #BBB5C4;
-    padding-top: 30px;
-    line-height: 64px;
-    align-items: center;
-    margin-left: 156px;
-}
-
 .light-header {
     color: black;
 }
 
-.dark-header {
+.dark_header {
     color: #BBB5C4;
 }
 
@@ -1178,7 +1170,6 @@ input[type=file]::file-selector-button:hover {
 
 .form-label {
     font-family: Inter;
-    color: #BBB5C4;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -1235,12 +1226,23 @@ input[type=file]::file-selector-button:hover {
     margin-bottom: 40px;
     margin-left: 156px;
 
+    font-family: 'Playfair Display';
+
+
     letter-spacing: 0em;
+
+
+    //styleName: Н3;
+
     font-size: 24px;
     font-weight: 400;
     line-height: 31px;
 
     text-align: left;
+
+
+
+
 
 }
 
@@ -1264,11 +1266,6 @@ input[type=file]::file-selector-button:hover {
         flex-direction: column;
         padding: 20px;
     }
-
-    .post-wrap {
-        flex-wrap: wrap;
-    }
-
 
     .service-content-container {
         display: flex;
@@ -1324,7 +1321,10 @@ input[type=file]::file-selector-button:hover {
         padding: 5px
     }
 
-    
+    .header {
+        padding-bottom: 10px
+    }
+
     .footer-links {
         flex-direction: column;
         text-align: center
@@ -1350,8 +1350,8 @@ input[type=file]::file-selector-button:hover {
     }
 
     .case {
+        display: flex;
         flex-wrap: wrap;
-        padding: 10px;
     }
 
     .case-text {
@@ -1362,30 +1362,6 @@ input[type=file]::file-selector-button:hover {
         display: none;
 
     }
-
-    .contact-form__inputs{
-        flex-direction: column;
-    }
-
-    .case-block{
-        margin-top: 30px;
-    }
-
-    .bigsplash_img{
-        width: 90%;
-        height: 90%;
-    
-    }
-
-    .bigsplash{
-        justify-content: center;
-        align-items: center;
-    }
-
-    .sticky{
-        position: absolute;
-    }
-
 }
 
 
@@ -1395,8 +1371,8 @@ input[type=file]::file-selector-button:hover {
 
     left: 922px;
     top: 375px;
-    width: 418px;
-    height: 568px;
+    width: 416px;
+    height: 610px;
     float: right;
 
     margin-right: 163px;
@@ -1406,7 +1382,7 @@ input[type=file]::file-selector-button:hover {
 }
 
 
-.header_ {
+h4 {
     text-align: left;
     font-family: 'PT Sans';
     font-style: normal;
@@ -1417,6 +1393,9 @@ input[type=file]::file-selector-button:hover {
     line-height: 64px;
     align-items: center;
     margin-left: 156px;
+
+
+
 }
 
 
