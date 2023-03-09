@@ -1,0 +1,28 @@
+services:
+  php-apache-environment:
+    container_name: buhcompany59
+    image: buhcompany59
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - '8000:80'
+  db:
+        container_name: mysql.j31270899.myjino.ru
+        image: mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
+            MYSQL_DATABASE: j31270899
+            MYSQL_USER: j31270899
+            MYSQL_PASSWORD: jdk31270899
+        ports:
+            - "9906:3306"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+        - '8080:80'
+    restart: always
+    environment:
+        PMA_HOST: db
+    depends_on:
+        - db
