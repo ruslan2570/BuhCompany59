@@ -41,8 +41,6 @@
 }
 
 .bigsplash_header {
-
-    padding-bottom: 50px;
     text-align: left;
 
 }
@@ -58,76 +56,6 @@
     font-size: 24px !important;
     width: 300px !important;
     height: 68px !important;
-}
-
-.decisions_heading {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 23px;
-    color: #3f313f;
-    padding-top: 80px;
-    padding-bottom: 25px;
-    display: flex;
-    justify-content: center
-}
-
-.decisions_text {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #3f313f;
-    padding-right: 92px
-}
-
-.decisions_title {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 22px;
-    color: #3f313f
-}
-
-.decisions_content {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #3f313f;
-    padding-left: 179px
-}
-
-.ex__head {
-    padding-left: 16px
-}
-
-.circle {
-    background: #456bd9;
-    border-radius: 50%;
-    color: #fff;
-    height: 500px;
-    position: relative;
-    width: 500px;
-    shape-outside: circle(50%)
-}
-
-.circle-content {
-    hyphens: auto;
-    margin: .75em;
-    text-align: center
-}
-
-svg {
-    fill: currentColor;
-    height: auto;
-    max-width: 66vmin;
-    transform-origin: center;
-    width: 66%
 }
 
 .advant {
@@ -316,7 +244,6 @@ svg {
     color: #3f313f
 }
 
-
 .prices_content {
     font-family: 'PT Sans';
     font-style: normal;
@@ -325,6 +252,69 @@ svg {
     line-height: 22px;
     color: #3f313f;
     padding-left: 179px
+}
+
+.centerTablestyle {
+    margin: 0px auto;
+    color: rgb(167, 161, 161);
+    font-size: 16px;
+    text-align: left;
+}
+
+.action_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,
+            #203B5B 0%,
+            #203B5B 70%,
+            #BBB5C4 70%,
+            #BBB5C4 100%);
+
+}
+
+.action_card>h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #BBB5C4;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.action_card>p {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #BBB5C4;
+    padding: 30px;
+
+}
+
+.action_card {
+    background: #203B5B;
+    border: 1px solid #BBB5C4;
+    border-radius: 10px;
+    width: 400px;
+    height: 200px;
+
+}
+
+.price_card {
+    background: #203B5B;
+    border: 1px solid #BBB5C4;
+    border-radius: 10px;
+    width: 400px;
+    height: 200px;
+
 }
 
 .actions {
@@ -360,17 +350,19 @@ svg {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    padding-bottom: 76px;
+    padding-bottom: 20px;
 }
 
 .post-item {
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
     padding: 10px;
+
 }
 
 .post-item-wrap {
-    border: 1px solid #000000;
-    border-radius: 10px;
+
     position: relative;
 }
 
@@ -382,13 +374,17 @@ svg {
 
 .post-title {
     color: #33261d;
+    font-size: 24px;
+    margin-top: 10px;
     margin-bottom: 15px;
     transition: .3s ease-in-out
 }
 
 .post-content {
     color: #000;
-    font-size: 18px
+    font-size: 20px;
+    justify-content: center;
+    padding-bottom: 20px;
 }
 
 @media (min-width:768px) {
@@ -643,7 +639,7 @@ li {
 }
 
 .header-links {
-    padding-left: 110px;
+    padding-left: 50px;
     display: flex;
     flex-wrap: wrap
 }
@@ -834,7 +830,6 @@ body {
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
     background-color: rgba(19, 19, 19, 0.528);
@@ -857,7 +852,6 @@ body {
     transition: background-color 0.6s ease;
 }
 
-/* Add a background color to the active dot/circle */
 .active,
 .dot:hover {
     background-color: #8D87B7;
@@ -890,35 +884,37 @@ hr {
     font-family: Inter;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
     padding: 10px;
     color: #BBB5C4;
     text-align: left;
 }
 
-.btn-price{
-    margin-top: 100px;
-    width: 362px;
-    height: 88px;
+.btn-price {
+    margin-top: 50px;
+    width: 300px;
+    height: 80px;
+    align-self: center;
+    cursor: pointer;
 }
 
 .description-list>li {
     font-family: Inter;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
     padding-left: 15px;
 }
 
-.service-content-container{
+.service-content-container {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.service-content-container > img{
+.service-content-container>img {
     height: 300px;
 }
 
@@ -938,7 +934,7 @@ h1 {
     font-weight: 400;
     font-size: 48px;
     color: #BBB5C4;
-    padding-top: 30px;
+    /* padding-top: 30px; */
     line-height: 64px;
 }
 
@@ -954,11 +950,24 @@ h2 {
     line-height: 64px;
 }
 
+h4 {
+    text-align: left;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    color: #BBB5C4;
+    padding-top: 30px;
+    line-height: 64px;
+    align-items: center;
+    margin-left: 156px;
+}
+
 .light-header {
     color: black;
 }
 
-.dark_header {
+.dark-header {
     color: #BBB5C4;
 }
 
@@ -1054,11 +1063,78 @@ h2 {
     display: block
 }
 
+#drop_zone {
+    border: 1px solid #BBB5C4;
+    border-radius: 10px;
+    width: 90%;
+    height: 100px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#drop_zone> div > p {
+    color: #BBB5C4;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.modal-vacancy {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, .4)
+}
+
+#btn-send-cv {
+    margin-top: 15px;
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.no-vacancy-text {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #BBB5C4;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 30px;
+}
+
 .vacancy-list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column
+}
+
+.vacancy-btn {
+    font-size: 18px;
+    width: 150px;
+    height: 50px;
+    background: #BBB5C4;
+
 }
 
 .vacancy-card {
@@ -1170,6 +1246,7 @@ input[type=file]::file-selector-button:hover {
 
 .form-label {
     font-family: Inter;
+    color: #BBB5C4;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -1195,15 +1272,15 @@ input[type=file]::file-selector-button:hover {
     font-family: Inter;
     font-size: 18px;
 
-    
-    
-    
 
 
-    
 
 
-    
+
+
+
+
+
 }
 
 
@@ -1226,27 +1303,16 @@ input[type=file]::file-selector-button:hover {
     margin-bottom: 40px;
     margin-left: 156px;
 
-    font-family: 'Playfair Display';
+    letter-spacing: 0em;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31px;
 
-
-letter-spacing: 0em;
-
-
-//styleName: Н3;
-
-font-size: 24px;
-font-weight: 400;
-line-height: 31px;
-
-text-align: left;
-
-   
-   
-    
+    text-align: left;
 
 }
 
-.content_header{
+.content_header {
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 500;
@@ -1254,7 +1320,7 @@ text-align: left;
     line-height: 40px;
     color: #BBB5C4;
     margin-bottom: 20px;
-    
+
 }
 
 
@@ -1267,7 +1333,12 @@ text-align: left;
         padding: 20px;
     }
 
-    .service-content-container{
+    .post-wrap {
+        flex-wrap: wrap;
+    }
+
+
+    .service-content-container {
         display: flex;
         flex-direction: column;
     }
@@ -1321,9 +1392,6 @@ text-align: left;
         padding: 5px
     }
 
-    .header {
-        padding-bottom: 10px
-    }
 
     .footer-links {
         flex-direction: column;
@@ -1350,8 +1418,8 @@ text-align: left;
     }
 
     .case {
-        display: flex;
         flex-wrap: wrap;
+        padding: 10px;
     }
 
     .case-text {
@@ -1362,10 +1430,16 @@ text-align: left;
         display: none;
 
     }
-}
 
+    .contact-form__inputs {
+        flex-direction: column;
+    }
 
+    .case-block {
+        margin-top: 30px;
+    }
 
+<<<<<<< HEAD
 .img_about{
  border-radius: 0px;
   
@@ -1374,15 +1448,44 @@ text-align: left;
   width: 388px;
   height: 568px;
   float: right;
+=======
+    .bigsplash_img {
+        width: 90%;
+        height: 90%;
+>>>>>>> a69af432f3f0aa943a4334b9316cc836c780b6ec
 
-  margin-right: 163px;
+    }
 
- 
+    .bigsplash {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sticky {
+        position: absolute;
+    }
 
 }
 
 
-h4 {
+
+.img_about {
+    border-radius: 0px;
+
+    left: 922px;
+    top: 375px;
+    width: 418px;
+    height: 568px;
+    float: right;
+
+    margin-right: 163px;
+
+
+
+}
+
+
+.header_ {
     text-align: left;
     font-family: 'PT Sans';
     font-style: normal;
@@ -1393,24 +1496,21 @@ h4 {
     line-height: 64px;
     align-items: center;
     margin-left: 156px;
-    
-
-    
 }
 
 
-.content_header_a{
+.content_header_a {
     text-align: left;
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     color: #BBB5C4;
-    padding-top: 30px;5
+    padding-top: 30px;
     line-height: 64px;
     align-items: center;
     margin-left: 156px;
-    padding-bottom:35px
+    padding-bottom: 35px
 }
 
 
@@ -1420,29 +1520,29 @@ h4 {
 
 .contacts_text {
 
-    
 
-    
+
+
     font-family: 'Inter';
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
     line-height: 29px;
     /* identical to box height */
-    
+
     display: flex;
     align-items: center;
-    
+
     /* Серый */
-    
+
     color: #BBB5C4;
 
     margin-left: 60px;
 
-    
-    
-   
-    
+
+
+
+
 
 }
 
@@ -1451,71 +1551,70 @@ h4 {
     height: 65px;
     width: 639px;
     left: 243px;
-    
+
     border-radius: nullpx;
-    
-    
-   
-    
+
+
+
+
     /* Н3 */
-    
+
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 31px;
     /* identical to box height */
-    
+
     display: flex;
     align-items: center;
-    
+
     /* Серый */
-    
+
     color: #BBB5C4;
     margin-left: 60px;
-   
+
 
 }
 
 
 .h1_contacts {
 
-   
-    
-   
-   
-    
+
+
+
+
+
     border-radius: nullpx;
-    //styleName: Н1;
     font-family: 'Playfair Display';
-    
-    
-   
+
+
+
     letter-spacing: 0em;
     text-align: left;
     margin-left: 68px;
 
-   
-  
-    
-   
-    
+
+
+
+
+
     /* Н1 */
-    
+
     font-family: 'Playfair Display';
     font-style: normal;
     font-weight: 400;
     font-size: 48px;
     line-height: 80px;
     /* identical to box height */
-    
+
     display: flex;
     align-items: center;
-    
+
     /* Серый */
-    
-    color: #BBB5C4;       
-    
-    
-    
+
+    color: #BBB5C4;
+
+
+
 }

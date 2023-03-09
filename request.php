@@ -56,7 +56,7 @@ if(isset($_FILES["cvFile"])){
     $nameArr = explode(".", basename($_FILES["cvFile"]["name"]));
     $extension = $nameArr[ count($nameArr) - 1];
 
-    if($extension != "doc" && $extension != "docx" && $extension != "pdf"){
+    if($extension != "doc" && $extension != "docx" && $extension != "pdf" && $extension != "jpg" && $extension != "jpeg" && $extension != "png"){
         echo "<script>alert('Неправильный формат файла')</script>";
         echo "<script>window.location.replace('/index.html');</script>";
         exit;
@@ -77,5 +77,3 @@ if(isset($_FILES["cvFile"])){
 }
 
 echo "<script>window.location.replace('/index.html');</script>";
-
-?>
