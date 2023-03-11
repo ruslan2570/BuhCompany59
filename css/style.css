@@ -40,6 +40,11 @@
 
 }
 
+.fig {
+    text-align: center;
+    /* Выравнивание по центру */
+}
+
 .bigsplash_header {
 
     padding-bottom: 50px;
@@ -55,7 +60,7 @@
 }
 
 .bigsplash_btn {
-    font-size: 24px !important;
+    font-size: 18px !important;
     width: 300px !important;
     height: 68px !important;
 }
@@ -147,22 +152,6 @@ svg {
     padding-bottom: 50px;
 }
 
-.slideshow-wrapper {
-    position: relative;
-}
-
-.light-arrow {
-    color: #e1e1e1 !important;
-    margin-left: 100px !important;
-    margin-right: 100px !important;
-
-}
-
-.light-arrow:hover {
-    background-color: rgba(19, 19, 19, 0.528);
-}
-
-
 .slideshow-container {
     max-width: 65%;
     position: relative;
@@ -227,8 +216,6 @@ svg {
     transition: .6s ease;
     border-radius: 0 3px 3px 0;
     z-index: 1;
-    margin-left: 50px;
-    margin-right: 50px;
 }
 
 .active,
@@ -281,7 +268,53 @@ svg {
     background-color: #e9e9e9;
     display: inline;
     justify-content: center;
-    margin-bottom: 25px
+    margin-bottom: 25px;
+    color: rgb(167, 161, 161);
+    font-size: 16px;
+}
+
+.centerTablestyle {
+    margin: 0px auto;
+    color: rgb(167, 161, 161);
+    font-size: 16px;
+}
+
+
+table.stripe {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+table.stripe caption {
+    caption-side: bottom;
+}
+
+.stripe td,
+.stripe th {
+    border: 1px solid #7e5a25;
+    padding: 3px 7px 2px 7px;
+}
+
+.stripe th {
+    border: 1px solid #7e5a25;
+    padding: 3px 7px 2px 7px;
+}
+
+.stripe th {
+    text-align: left;
+    padding: 15px;
+    background-color: #b56a6a;
+    color: #ffffff;
+}
+
+//* нечетные номера */
+.stripe tr:nth-child(odd) {
+    background-color: #ecd9d9;
+}
+
+/* четные номера  */
+.stripe tr:nth-child(even) {
+    background: #e8e3d4;
 }
 
 .prices_heading {
@@ -360,12 +393,12 @@ svg {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    padding-bottom: 76px;
+    flex-wrap: wrap
 }
 
 .post-item {
     padding: 10px;
+
 }
 
 .post-item-wrap {
@@ -388,7 +421,8 @@ svg {
 
 .post-content {
     color: #000;
-    font-size: 18px
+    font-size: 18px;
+    justify-content: center;
 }
 
 @media (min-width:768px) {
@@ -549,33 +583,11 @@ svg {
 
 .contact-form__button {
     flex: 0 0 auto;
-    font-size: 18px;
-    background: #D9FFF8;
-    border-radius: 10px;
-    width: 250px;
-    height: 50px;
-
-
-
-}
-
-.contact-form__inputs {
-    display: flex;
-    flex-direction: row;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    font-size: 24px
 }
 
 .contact-form__input {
-    font-size: 20px;
-    color: #9A9A9A;
-    margin: 20px;
-
-    height: 40px;
-
-    background: #E9E9E9;
-    border-radius: 10px;
-    border-color: #E9E9E9;
+    font-size: 24px
 }
 
 * {
@@ -669,7 +681,7 @@ li {
 .btn-call {
     font-size: 18px;
     width: 150px;
-    height: 50px;
+    height: 50px
 }
 
 .header-contacts {
@@ -797,7 +809,7 @@ body {
     border: 1px solid #203B5B;
     border-radius: 10px;
     height: 335px;
-    width: 500px;
+    width: 400px;
     font-family: 'PT Sans';
 
 }
@@ -827,7 +839,22 @@ body {
     font-size: 36px;
 }
 
+/* Next & previous buttons */
+/* .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  } */
 
+/* Position the "next button" to the right */
 .next {
     position: absolute;
     right: 0;
@@ -892,15 +919,7 @@ hr {
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
-    padding: 10px;
-    color: #BBB5C4;
-    text-align: left;
-}
-
-.btn-price {
-    margin-top: 100px;
-    width: 362px;
-    height: 88px;
+    padding: 10px
 }
 
 .description-list>li {
@@ -909,17 +928,7 @@ hr {
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
-    padding-left: 15px;
-}
-
-.service-content-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.service-content-container>img {
-    height: 300px;
+    padding-left: 10px
 }
 
 .description-list>li::before {
@@ -927,8 +936,10 @@ hr {
 }
 
 .service-description-container {
-    margin: 50px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+
 }
 
 h1 {
@@ -940,6 +951,7 @@ h1 {
     color: #BBB5C4;
     padding-top: 30px;
     line-height: 64px;
+    align-items: center;
 }
 
 h2 {
@@ -1087,17 +1099,10 @@ h2 {
 
 .contact-form__title {
     font-size: 23px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 36px;
-    display: flex;
 }
 
 .contact-form {
-    background: #BBB5C4;
-
+    background-color: #E5D6D2;
     font-size: 30px;
     max-width: 80%;
     margin: 50px auto;
@@ -1194,71 +1199,8 @@ input[type=file]::file-selector-button:hover {
 .contacts_table td {
     font-family: Inter;
     font-size: 18px;
-
-
-
-
-
-
-
-
-
-
+    padding: 10px 5px
 }
-
-
-
-.about_container {
-    flex-direction: row;
-    display: flex;
-    margin: 50px;
-    justify-content: center;
-    align-items: center;
-}
-
-.content_about>p {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 40px;
-    color: #BBB5C4;
-    margin-bottom: 40px;
-    margin-left: 156px;
-
-    font-family: 'Playfair Display';
-
-
-    letter-spacing: 0em;
-
-
-    //styleName: Н3;
-
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 31px;
-
-    text-align: left;
-
-
-
-
-
-}
-
-.content_header {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 40px;
-    color: #BBB5C4;
-    margin-bottom: 20px;
-
-}
-
-
-
 
 @media(max-width:1000px) {
     .contact-form {
@@ -1267,10 +1209,6 @@ input[type=file]::file-selector-button:hover {
         padding: 20px;
     }
 
-    .service-content-container {
-        display: flex;
-        flex-direction: column;
-    }
 
     .slide-feed {
         flex-wrap: wrap;
@@ -1364,158 +1302,7 @@ input[type=file]::file-selector-button:hover {
     }
 }
 
-
-
-.img_about {
-    border-radius: 0px;
-
-    left: 922px;
-    top: 375px;
-    width: 416px;
-    height: 610px;
-    float: right;
-
-    margin-right: 163px;
-
-
-
-}
-
-
-h4 {
-    text-align: left;
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    color: #BBB5C4;
-    padding-top: 30px;
-    line-height: 64px;
-    align-items: center;
-    margin-left: 156px;
-
-
-
-}
-
-
-.content_header_a {
-    text-align: left;
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    color: #BBB5C4;
-    padding-top: 30px;
-    5 line-height: 64px;
-    align-items: center;
-    margin-left: 156px;
-    padding-bottom: 35px
-}
-
-
-
-
-
-
-.contacts_text {
-
-
-
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 29px;
-    /* identical to box height */
-
-    display: flex;
-    align-items: center;
-
-    /* Серый */
-
-    color: #BBB5C4;
-
-    margin-left: 60px;
-
-
-
-
-
-
-}
-
-.contacts_text_a {
-
-    height: 65px;
-    width: 639px;
-    left: 243px;
-
-    border-radius: nullpx;
-
-
-
-
-    /* Н3 */
-
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 31px;
-    /* identical to box height */
-
-    display: flex;
-    align-items: center;
-
-    /* Серый */
-
-    color: #BBB5C4;
-    margin-left: 60px;
-
-
-}
-
-
-.h1_contacts {
-
-
-
-
-
-
-    border-radius: nullpx;
-    //styleName: Н1;
-    font-family: 'Playfair Display';
-
-
-
-    letter-spacing: 0em;
-    text-align: left;
-    margin-left: 68px;
-
-
-
-
-
-
-    /* Н1 */
-
-    font-family: 'Playfair Display';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 80px;
-    /* identical to box height */
-
-    display: flex;
-    align-items: center;
-
-    /* Серый */
-
-    color: #BBB5C4;
-
-
-
+.fig {
+    text-align: center;
+    /* Выравнивание по центру */
 }
