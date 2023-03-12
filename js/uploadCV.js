@@ -81,5 +81,4 @@ sendBtn.onclick = async function () {
 let vacancyBtns = document.getElementsByClassName("btn-vacancy");
 for (let i = 0; i < vacancyBtns.length; i++) {
     const element = vacancyBtns[i];
-    
 }
