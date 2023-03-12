@@ -99,8 +99,8 @@ if (!mysqli_query($link, $query)) {
 
                     <div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" onclick="clickHandler(event)">
                         <div>
-                            <p>Поместите свое резюме в эту зону.</p>
-                            <p>Или нажмите и выберите файл.</p>
+                            <p class="drop_text">Поместите свое резюме в эту зону.</p>
+                            <p class="drop_text">Или нажмите и выберите файл.</p>
                         </div>
                     </div>
 
@@ -214,6 +214,4 @@ if (!mysqli_query($link, $query)) {
     <script src="/js/uploadCV.js"></script>
     <script src="/js/modal.js"></script>
     <script src="/js/sticky.js"></script>
-
-<<<<<<< HEAD
 </body>

@@ -1,3 +1,5 @@
+let dropText = document.getElementsByClassName("drop_text");
+let uploadFile;
 function dropHandler(ev) {
     console.log("File(s) dropped");
 
@@ -10,21 +12,22 @@ function dropHandler(ev) {
             // If dropped items aren't files, reject them
             if (item.kind === "file") {
                 const file = item.getAsFile();
-                console.log(`… file[${i}].name = ${file.name}`);
+                uploadFile = file;
+                dropText[0].textContent = file.name;
+                dropText[1].textContent = "";
             }
         });
     } else {
         // Use DataTransfer interface to access the file(s)
         [...ev.dataTransfer.files].forEach((file, i) => {
-            console.log(`… file[${i}].name = ${file.name}`);
+            uploadFile = file;
+            dropText[0].textContent = file.name;
+            dropText[1].textContent = "";
         });
     }
 }
 
 function dragOverHandler(ev) {
-    console.log("File(s) in drop zone");
-
-    // Prevent default behavior (Prevent file from being opened)
     ev.preventDefault();
 }
 
@@ -32,8 +35,39 @@ function clickHandler(ev) {
     ev.preventDefault();
 
     var input = document.createElement('input');
+    input.addEventListener("change", handleFiles, false);
     input.type = 'file';
     input.click();
 }
 
-sendBtn = document.getElementsByClassName("btn-send-cv")[0];
+function handleFiles() {
+    dropText[0].textContent = this.files[0].name;
+    dropText[1].textContent = "";
+    uploadFile = this.files[0];
+}
+
+sendBtn = document.getElementById("btn-send-cv");
+
+sendBtn.onclick = async function () {
+    if (uploadFile == null) {
+        alert("Выберите файл перед оправкой!");
+        return;
+    }
+
+    let vacancyId = 1;
+    // object = { "id": id, "name": uploadFile.name, "file": fileBase64 };
+
+    let formData = new FormData();
+    formData.append('vacancy_id', vacancyId);
+    formData.append('file', uploadFile);
+
+    let response = fetch('request.php', {
+        method: 'POST',
+        body: formData
+    });
+
+    let result = response;
+
+    alert(result.message);
+
+}

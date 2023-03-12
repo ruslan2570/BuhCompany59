@@ -73,7 +73,6 @@ if(isset($_FILES["cvFile"])){
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
     copy($_FILES['cvFile']['tmp_name'], $target_file);
-
 }
 
 echo "<script>window.location.replace('/index.html');</script>";
