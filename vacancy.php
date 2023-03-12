@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 $config = include 'admin/db_config.php';
@@ -164,7 +163,6 @@ if (!mysqli_query($link, $query)) {
                 <!-- <div class="form-container">
                 <p class="form-label">Вы можете прикрепить своё резюме здесь</p>
                 <form action="request.php" method="post" enctype="multipart/form-data">
-
                     <input type="file" name="cvFile" id="cvFile">
                     <button class="btn" type="submit">Отправить</button>
                 </form>
@@ -203,8 +201,8 @@ if (!mysqli_query($link, $query)) {
                 <hr>
                 <ul>
                     <li>Тел.: <a href="tel:89134514341">+7 913 451 43 41</a></li>
-                        <li>E-mail:<a href="mailto:pochikovskaya.n@mail.ru">pochikovskaya.n@mail.ru</a></li>
-                        <li>Адрес: <a href="https://yandex.ru/maps/-/CCUKqLArdA" target="_blank">РФ, г.Новосибирск,ул. Танковая, 72</a></li>
+                    <li>E-mail:<a href="mailto:pochikovskaya.n@mail.ru">pochikovskaya.n@mail.ru</a></li>
+                    <li>Адрес: <a href="https://yandex.ru/maps/-/CCUKqLArdA" target="_blank">РФ, г.Новосибирск,ул. Танковая, 72</a></li>
                     <ul>
             </div>
         </div>
@@ -217,4 +215,5 @@ if (!mysqli_query($link, $query)) {
     <script src="/js/modal.js"></script>
     <script src="/js/sticky.js"></script>
 
+<<<<<<< HEAD
 </body>
