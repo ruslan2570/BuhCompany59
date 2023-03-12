@@ -61,13 +61,19 @@ sendBtn.onclick = async function () {
     formData.append('vacancy_id', vacancyId);
     formData.append('file', uploadFile);
 
-    let response = fetch('request.php', {
+    var req = jQuery.ajax({
+        url: '/post.php',
         method: 'POST',
-        body: formData
+        data: formData,
+        processData: false, 
+        contentType: false
     });
 
-    let result = response;
-
-    alert(result.message);
+    // jQuery is promise A++ compatible and is the todays norms of doing things 
+    req.then(function (response) {
+        console.log(response)
+    }, function (xhr) {
+        console.error('failed to fetch xhr', xhr)
+    })
 
 }
