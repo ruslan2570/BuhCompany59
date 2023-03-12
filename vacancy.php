@@ -37,21 +37,20 @@ if (!mysqli_query($link, $query)) {
 </head>
 
 <body>
-    <header class="header">
+<header class="header">
         <a href="/index.html">
             <img class="logo" src="/img/templogo.png">
         </a>
         <nav class="header-links">
+            <a href="/index.html">Главная</a>
             <a href="/services.html">Услуги</a>
             <a href="/prices.html">Цены</a>
-            <a href="/about.html">О нас</a>
-            <a href="/vacancy.php" class="active-link">Вакансии</a>
+            <a href="/about.html" class="active-link">О нас</a>
+            <a href="/vacancy.php">Вакансии</a>
             <a href="/contacts.html">Контакты</a>
         </nav>
         <div class="header-contacts">
-            <a href="tel:89134514341">
-                <h3 class="header-phone">+7 913 451 43 41</h3>
-            </a>
+            <h3 class="header-phone">+7 913 451 43 41</h3>
             <p class="header-hours">Пн&nbsp;&mdash; пт 9:00&nbsp;&mdash; 18:00</p>
         </div>
         <div>
