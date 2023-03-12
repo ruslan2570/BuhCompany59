@@ -1,4 +1,5 @@
 let dropText = document.getElementsByClassName("drop_text");
+
 let uploadFile;
 function dropHandler(ev) {
     console.log("File(s) dropped");
@@ -69,7 +70,6 @@ sendBtn.onclick = async function () {
         contentType: false
     });
 
-    // jQuery is promise A++ compatible and is the todays norms of doing things 
     req.then(function (response) {
         console.log(response)
     }, function (xhr) {
@@ -77,3 +77,5 @@ sendBtn.onclick = async function () {
     })
 
 }
+
+let vacancyBtns = document.getElementsByClassName("btn-vacancy");
