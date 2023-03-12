@@ -42,7 +42,6 @@ if(isset($name)){
     $query = "SELECT `email`, `login` AS 'name' FROM `user` WHERE `email` IS NOT NULL"; 
     $recipients = mysqli_query($link, $query);
 
-    
     if(mysqli_num_rows($recipients) > 0){
 
         sendMail($recipients, "Новая заявка", $body);

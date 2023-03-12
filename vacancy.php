@@ -105,7 +105,7 @@ if (!mysqli_query($link, $query)) {
                     </div>
 
                     </li>
-                    <button id="btn-send-cv" class="btn">Оставить заявку</button>
+                    <button id="btn-send-cv" class="btn">Отправить резюме</button>
                     </form>
                 </div>
             </div>
@@ -154,6 +154,7 @@ if (!mysqli_query($link, $query)) {
                                             <?php echo $row["skills"];
                                         } ?>
                                             </p>
+                                            <button vacancy-id=<?php echo $row['id']; ?> class="btn btn-vacancy">Откликнуться</button>
                     </div>
             <?php }
             } ?>

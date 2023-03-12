@@ -1143,7 +1143,8 @@ h4 {
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
-    background-color: #eaeaea
+    background-color: #BBB5C4;
+
 }
 
 .vacancy-card>p {
@@ -1158,7 +1159,19 @@ h4 {
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
-    line-height: 44px
+    line-height: 44px;
+    padding-top: 0px !important;
+}
+
+.btn-vacancy{
+    border: 2px solid #D9FFF8;
+    border-radius: 10px;
+    background: #D9FFF8;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    width: 230px;
+    height: 68px;
 }
 
 .contact-form__title {
