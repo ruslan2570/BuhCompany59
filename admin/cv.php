@@ -21,7 +21,6 @@ if (isset($_COOKIE["login"]) && isset($_COOKIE["password"])) {
 $query = "SELECT password FROM `user` WHERE login LIKE '$login'";
 if (!mysqli_query($link, $query)) {
     $error = mysqli_error($link);
-    echo "</br>$error";
 } else {
     $result = mysqli_query($link, $query);
 }
@@ -50,6 +49,9 @@ if (isset($_GET["file"])) {
         readfile($file);
     }
 }
+
+
+
 ?>
 
 
@@ -115,7 +117,7 @@ if (isset($_GET["file"])) {
             $handle = opendir('../cv/');
             while (false !== ($entry = readdir($handle))) {
                 if ($entry != "." && $entry != "..") {
-                    echo "<a class='link' href='cv.php?file=" . $entry . "'>" . $entry . "</a>\n";
+                    echo "<a class='link' href='download.php?file=" . $entry . "'>" . $entry . "</a>\n";
                 }
             }
             ?>

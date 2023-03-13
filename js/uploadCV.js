@@ -49,13 +49,13 @@ function handleFiles() {
 
 sendBtn = document.getElementById("btn-send-cv");
 
+let vacancyId;
+
 sendBtn.onclick = async function () {
     if (uploadFile == null) {
         alert("Выберите файл перед оправкой!");
         return;
     }
-
-    let vacancyId = 1;
     // object = { "id": id, "name": uploadFile.name, "file": fileBase64 };
 
     let formData = new FormData();
@@ -63,22 +63,33 @@ sendBtn.onclick = async function () {
     formData.append('file', uploadFile);
 
     var req = jQuery.ajax({
-        url: '/post.php',
+        url: '/request.php',
         method: 'POST',
         data: formData,
-        processData: false, 
+        processData: false,
         contentType: false
     });
 
-    req.then(function (response) {
-        console.log(response)
-    }, function (xhr) {
-        console.error('failed to fetch xhr', xhr)
-    })
 
+    console.log(req);
+    req.then(function (response) {
+        alert("Ваше резюме успешно отправлено. Спасибо!");
+        modalVacancy.style.display = "none";
+        console.log(response);
+    }, function (xhr) {
+        // alert("При отправке резюме произошла ошибка: " + JSON.parse(xhr)['error']);
+        alert("При отправке резюме произошла ошибка: " + xhr.responseText);
+        console.log(xhr);
+        console.log(xhr.responseText);
+    })
 }
 
-let vacancyBtns = document.getElementsByClassName("btn-vacancy");
-for (let i = 0; i < vacancyBtns.length; i++) {
-    const element = vacancyBtns[i];
+
+if (btnsVacancy.length > 0) {
+    for (let i = 0; i < btnsVacancy.length; i++) {
+        btnsVacancy[i].onclick = function () {
+            vacancyId = btnsVacancy[i].getAttribute("vacancy-id");
+            modalVacancy.style.display = "block";
+        }
+    }
 }

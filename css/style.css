@@ -660,6 +660,7 @@ li {
     border-radius: 10px;
     border-style: none;
     background: #D9FFF8;
+    cursor: pointer;
 }
 
 .btn-call {

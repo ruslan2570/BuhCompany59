@@ -211,8 +211,9 @@ if (!mysqli_query($link, $query)) {
             <h3>All Rights Reserved 2023</h3>
         </div>
     </footer>
-    <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/js/uploadCV.js"></script>
     <script src="/js/modal.js"></script>
+    <script src="/js/uploadCV.js"></script>
     <script src="/js/sticky.js"></script>
+    <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
 </body>
+</html>

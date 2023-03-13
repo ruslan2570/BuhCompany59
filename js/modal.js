@@ -1,9 +1,8 @@
+let modal = document.getElementsByClassName("modal-form")[0];
 
-var modal = document.getElementsByClassName("modal-form")[0];
+let btns = document.getElementsByClassName("btn-call");
 
-var btns = document.getElementsByClassName("btn-call");
-
-var span = document.getElementsByClassName("modal-close");
+let span = document.getElementsByClassName("modal-close");
 
 for(let i = 0; i < btns.length; i++){
   btns[i].onclick = function() {
@@ -24,15 +23,14 @@ window.onclick = function(event) {
   }
 } 
 
-
 var modalVacancy = document.getElementsByClassName("modal-vacancy")[0];
 if(modalVacancy != null){
 
-  var vacancyBtns = document.getElementsByClassName("vacancy-btn");
+  var vacancyBtn = document.getElementsByClassName("vacancy-btn")[0];
+  var btnsVacancy = document.getElementsByClassName("btn-vacancy");
   
-  
-  for(let i = 0; i < vacancyBtns.length; i++){
-    vacancyBtns[i].onclick = function() {
+  if(vacancyBtn != null){
+    vacancyBtn.onclick = function() {
       modalVacancy.style.display = "block";
     }
   }
@@ -42,6 +40,5 @@ if(modalVacancy != null){
       modal.style.display = "none";
       modalVacancy.style.display = "none";
     }
-  } 
-
+  }
 }
