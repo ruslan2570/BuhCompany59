@@ -85,7 +85,7 @@ sendBtn.onclick = async function () {
 }
 
 
-if (btnsVacancy.length > 0) {
+if (btnsVacancy != null) {
     for (let i = 0; i < btnsVacancy.length; i++) {
         btnsVacancy[i].onclick = function () {
             vacancyId = btnsVacancy[i].getAttribute("vacancy-id");
