@@ -44,7 +44,7 @@ if (isset($_GET["exit"])) {
 
 ?>
 
-<? 
+<?php
 
 $count_task_query = "SELECT COUNT(*) AS count FROM `task` WHERE `isNew` = 1";
 $count_vacancy_query = "SELECT COUNT(*) AS count FROM `vacancy`";
