@@ -45,8 +45,8 @@ if (!mysqli_query($link, $query)) {
             <a href="/index.html">Главная</a>
             <a href="/services.html">Услуги</a>
             <a href="/prices.html">Цены</a>
-            <a href="/about.html" class="active-link">О нас</a>
-            <a href="/vacancy.php">Вакансии</a>
+            <a href="/about.html">О нас</a>
+            <a href="/vacancy.php"  class="active-link">Вакансии</a>
             <a href="/contacts.html">Контакты</a>
         </nav>
         <div class="header-contacts">
