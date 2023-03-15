@@ -33,23 +33,11 @@ if (mysqli_num_rows($result) == 0 || $password != mysqli_fetch_assoc($result)["p
 ?>
 
 <?php
-if (isset($_GET["file"])) {
-    $file = basename($_GET['file']);
-    $file = '../cv/' . $file;
+$vacancies = "SELECT * FROM `vacancy`";
+$cvies = "SELECT * FROM `cv`";
 
-    if (!file_exists($file)) {
-        die('file not found');
-    } else {
-        header("Cache-Control: public");
-        header("Content-Description: File Transfer");
-        header("Content-Disposition: attachment; filename=$file");
-        header("Content-Type: application/zip");
-        header("Content-Transfer-Encoding: binary");
-
-        readfile($file);
-    }
-}
-
+$vacancies_result = mysqli_query($link, $vacancies);
+$cvies_result = mysqli_query($link, $cvies);
 
 
 ?>
@@ -70,11 +58,10 @@ if (isset($_GET["file"])) {
 <body>
     <header>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="#">Админка</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                    aria-controls="navbarContent" aria-expanded="false">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarContent">
@@ -94,7 +81,7 @@ if (isset($_GET["file"])) {
                         <li class="nav-item">
                             <a class="nav-link" href="/admin/profile.php">Профиль</a>
                         </li>
-                        
+
                     </ul>
                     <div class="collapse navbar-collapse" id="navbarContent">
                         <ul class="navbar-nav mе-auto mb-2 top-menu">
@@ -112,15 +99,66 @@ if (isset($_GET["file"])) {
         <h1 class="text-center">Резюме</h1>
         <p class="text-danger">Будьте бдительны при скачивании файлов из интернета</p>
 
-        <div class="container cv-list">
-            <?php
-            $handle = opendir('../cv/');
-            while (false !== ($entry = readdir($handle))) {
-                if ($entry != "." && $entry != "..") {
-                    echo "<a class='link' href='download.php?file=" . $entry . "'>" . $entry . "</a>\n";
-                }
-            }
-            ?>
+        <div class="container">
+
+
+
+
+            <div class="accordion" id="accordionVacancy">
+                <?php
+                foreach ($vacancies_result as $vacancy_row) {
+                ?>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading-<?php echo $vacancy_row["id"]; ?>">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo $vacancy_row["id"]; ?>" aria-expanded="false" aria-controls="collapse-<?php echo $vacancy_row["id"]; ?>">
+                                <?php echo $vacancy_row["name"]; ?>
+                            </button>
+                        </h2>
+                        <div id="collapse-<?php echo $vacancy_row["id"]; ?>" class="accordion-collapse collapse " aria-labelledby="heading-<?php echo $vacancy_row["id"]; ?>" data-bs-parent="#accordionVacancy">
+                            <div class="accordion-body">
+                                <?php
+                                foreach ($cvies_result as $cv_row) {
+                                    if ($cv_row["vacancy_id"] == $vacancy_row["id"]) {
+                                ?>
+
+                                        <a href="download.php?file=<?php echo $cv_row["file_name"]; ?>" target="_blank"><?php echo $cv_row["original_name"] . " от " . $cv_row["cv_date"]; ?></a>
+
+                                <?php
+                                    }
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-no-category">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-no-category" aria-expanded="false" aria-controls="collapse-no-category">
+                            Без категории
+                        </button>
+                    </h2>
+                    <div id="collapse-no-category" class="accordion-collapse collapse " aria-labelledby="heading-no-category" data-bs-parent="#accordionVacancy">
+                        <div class="accordion-body">
+                            <?php
+                            foreach ($cvies_result as $cv_row) {
+                                if ($cv_row["vacancy_id"] == null) {
+                            ?>
+
+                                    <a href="download.php?file=<?php echo $cv_row["file_name"]; ?>" target="_blank"><?php echo $cv_row["original_name"] . " от " . $cv_row["cv_date"]; ?></a>
+
+                            <?php
+                                }
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
         </div>
     </main>
 

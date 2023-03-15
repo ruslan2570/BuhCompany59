@@ -33,14 +33,27 @@ if (mysqli_num_rows($result) == 0 || $password != mysqli_fetch_assoc($result)["p
 
 ?>
 
-<?php 
+<?php
 
-if(isset($_GET["exit"])){
+if (isset($_GET["exit"])) {
     setcookie("login", "", -1);
     setcookie("password", "", -1);
     echo "<script>window.location.replace('/index.html');</script>";
     exit;
 }
+
+?>
+
+<? 
+
+$count_task_query = "SELECT COUNT(*) AS count FROM `task` WHERE `isNew` = 1";
+$count_vacancy_query = "SELECT COUNT(*) AS count FROM `vacancy`";
+$count_cv_query = "SELECT COUNT(*) AS count FROM `cv`";
+
+$count_task = mysqli_fetch_array(mysqli_query($link, $count_task_query))["count"];
+$count_vacancy = mysqli_fetch_array(mysqli_query($link, $count_vacancy_query))["count"];
+$count_cv = mysqli_fetch_array(mysqli_query($link, $count_cv_query))["count"];
+
 
 ?>
 
@@ -62,8 +75,7 @@ if(isset($_GET["exit"])){
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="#">Админка</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                    aria-controls="navbarContent" aria-expanded="false">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarContent">
@@ -83,7 +95,7 @@ if(isset($_GET["exit"])){
                         <li class="nav-item">
                             <a class="nav-link" href="/admin/profile.php">Профиль</a>
                         </li>
-                        
+
 
                     </ul>
                     <div class="collapse navbar-collapse" id="navbarContent">
@@ -98,8 +110,47 @@ if(isset($_GET["exit"])){
         </nav>
     </header>
 
-    <main>
-        <h1></h1>
+    <main class="container flex">
+
+        <div class="row">
+
+            <div class="card m-3" style="width: 18rem;">
+                <div class="card-header">
+                    <h3>Новых заявок</h3>
+                </div>
+                <div class="card-body">
+                    <h5><?php echo $count_task; ?></h5>
+                </div>
+            </div>
+
+            <div class="card m-3" style="width: 18rem;">
+                <div class="card-header">
+                    <h3>Открытых вакансий</h3>
+                </div>
+                <div class="card-body">
+                    <h5><?php echo $count_vacancy; ?></h5>
+                </div>
+            </div>
+
+            <div class="card m-3" style="width: 18rem;">
+                <div class="card-header">
+                    <h3>Резюме</h3>
+                </div>
+                <div class="card-body">
+                    <h5><?php echo $count_cv; ?></h5>
+                </div>
+            </div>
+
+            <div class="card m-3" style="width: 18rem;">
+                <div class="card-header">
+                    <h3>Довольных клиентов😊</h3>
+                </div>
+                <div class="card-body">
+                    <h5>→∞</h5>
+                </div>
+            </div>
+
+        </div>
 
     </main>
 
