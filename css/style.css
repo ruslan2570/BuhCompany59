@@ -271,6 +271,17 @@
             #203B5B 70%,
             #BBB5C4 70%,
             #BBB5C4 100%);
+}
+.action_container_price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,
+            #203B5B 0%,
+            #203B5B 70%,
+            #BBB5C4 70%,
+            #BBB5C4 100%);
 
 }
 
