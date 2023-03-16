@@ -2,7 +2,7 @@
 
 if (isset($_GET["file"])) {
     $file = basename($_GET['file']);
-    $file = '../' . $file;
+    $file = '../cv/' . $file;
     
     header("Cache-Control: public");
     header("Content-Description: File Transfer");
