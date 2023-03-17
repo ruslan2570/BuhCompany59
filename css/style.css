@@ -654,6 +654,11 @@ li {
 .header-links>a {
     padding-left: 28px;
     padding-right: 28px;
+    transition:0,35s;
+}
+.header-links:hover{
+	background-color:blue;
+	color:#000;
 }
 
 .btn {
