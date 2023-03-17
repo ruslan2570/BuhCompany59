@@ -656,9 +656,11 @@ li {
     padding-right: 28px;
     transition:0,35s;
 }
-#navbar a:hover {
-  background-color: blue;
-  border-left: 5px solid #3333FF;
+
+
+.header-links a:hover {
+  background: #0078BF;
+color: #fff;
 }
 
 .btn {
