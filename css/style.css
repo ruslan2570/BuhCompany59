@@ -658,10 +658,10 @@ li {
 }
 
 
-.header-links a:hover {
+/* .header-links a:hover {
   background: #0078BF;
 color: #fff;
-}
+} */
 
 .btn {
     font-family: Inter;
